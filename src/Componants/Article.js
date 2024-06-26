@@ -16,7 +16,7 @@ const Article = () => {
 
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
-      <div className="container mx-auto p-6">
+      <div className={`container mx-auto p-6 ${darkMode ? 'dark' : ''}`}>
         <Header />
         <div className="flex items-center justify-between mb-6">
           <button
@@ -44,14 +44,13 @@ const Article = () => {
             <img
               src={article.urlToImage}
               alt={article.title}
-              className="w-full h-auto object-cover"
-              loading="lazy" // Lazy load the image
+              className="w-full h-105 object-cover"
             />
           )}
           <div className="p-6">
             <h1 className={`text-3xl font-bold font-serif ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.title}</h1>
             <p className={`text-gray-600 mt-2 font-serif ${darkMode ? 'dark:text-gray-400' : ''}`}>By {article.author || 'Unknown'}</p>
-            <p className={`text-gray-600 mt-2  font-serif ${darkMode ? 'dark:text-gray-400' : ''}`}>
+            <p className={`text-gray-600 mt-2 font-serif ${darkMode ? 'dark:text-gray-400' : ''}`}>
               Published at: {new Date(article.publishedAt).toLocaleString()}
             </p>
             <p className={`font-serif mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.description}</p>
@@ -68,8 +67,8 @@ const Article = () => {
             )}
           </div>
         </div>
-        <Footer darkMode={darkMode} />
       </div>
+      <Footer />
     </div>
   );
 };

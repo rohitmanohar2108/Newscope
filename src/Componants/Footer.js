@@ -17,7 +17,7 @@ const Footer = ({ darkMode }) => {
   });
 
   return (
-    <footer className={` ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'} py-4`}>
+    <footer className={` ${darkMode ? 'bg-white text-white' : 'bg-black text-gray-800'} py-4`}>
       <div className="container mx-auto px-6 lg:px-4 flex flex-col items-center justify-center font-serif">
         <p className="text-sm">&copy; {new Date().getFullYear()} NewScope. All rights reserved.</p>
 
@@ -108,4 +108,3 @@ const Footer = ({ darkMode }) => {
 };
 
 export default Footer;
-
