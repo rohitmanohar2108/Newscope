@@ -48,20 +48,22 @@ const Browse = () => {
     <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <div className={`container mx-auto p-6 ${darkMode ? 'dark' : ''}`}>
         <Header />
-        <h1 className={`text-3xl font-bold flex-grow text-center mt-5 mb-5 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
-          Top Headlines
-        </h1>
-        <button
-          onClick={toggleDarkMode}
-          className={`p-2 rounded-full mb-7 flex items-center ml-auto ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'}`}
-          title={darkMode ? 'Light Mode' : 'Dark Mode'}
-        >
-          {darkMode ? (
-            <HiSun className="w-6 h-6" />
-          ) : (
-            <HiMoon className="w-6 h-6" />
-          )}
-        </button>
+        <div className="flex items-center justify-between mb-5">
+          <h1 className={`text-3xl font-bold flex-grow text-center ml-8 mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+            Top Headlines
+          </h1>
+          <button
+            onClick={toggleDarkMode}
+            className={`p-2 rounded-full flex items-center ml-auto mt-4 ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'}`}
+            title={darkMode ? 'Light Mode' : 'Dark Mode'}
+          >
+            {darkMode ? (
+              <HiSun className="w-6 h-6" />
+            ) : (
+              <HiMoon className="w-6 h-6" />
+            )}
+          </button>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {loading ? (
             // Render shimmer effect while loading
@@ -73,7 +75,7 @@ const Browse = () => {
             articles.map((article, index) => (
               <div
                 key={index}
-                className={` rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform transform hover:scale-105 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
+                className={`rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform transform hover:scale-105 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
                 onClick={() => handleCardClick(article)}
               >
                 {article.urlToImage && (
