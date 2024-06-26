@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { HiMoon, HiSun } from 'react-icons/hi'; // Icons for light mode and dark mode
+import { useLocation, useNavigate } from 'react-router-dom';
+import { HiArrowLeft, HiMoon, HiSun } from 'react-icons/hi'; // Icons for back, light mode, and dark mode
 import Header from './Header';
 
 const Article = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { article } = location.state;
   const [darkMode, setDarkMode] = useState(false);
 
@@ -17,10 +18,17 @@ const Article = () => {
       <div className={`container mx-auto p-6 ${darkMode ? 'dark' : ''}`}>
         <Header />
         <div className="flex items-center justify-between mb-6">
-          <h1 className={`text-3xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Article</h1>
+          <button
+            onClick={() => navigate(-1)}
+            className="p-2 my-3 rounded-full flex items-center bg-gray-200 text-gray-800"
+            title="Back to Browse"
+          >
+            <HiArrowLeft className="w-6 h-6" />
+          </button>
+          <h1 className={`text-3xl font-bold flex-grow text-center ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Article</h1>
           <button
             onClick={toggleDarkMode}
-            className={`p-2 my-3 rounded-full flex items-center ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'}`}
+            className={`p-2 rounded-full flex items-center ml-auto ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'}`}
             title={darkMode ? 'Light Mode' : 'Dark Mode'}
           >
             {darkMode ? (
