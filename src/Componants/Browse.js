@@ -13,7 +13,7 @@ const Browse = () => {
     const fetchArticles = async () => {
       try {
         const result = await axios.get(
-          'https://newsapi.org/v2/everything?q=geopolitics&apiKey=ea8156fa512e49ddae5f4360b29947f0'
+          'https://newsapi.org/v2/everything?q=indian politics&apiKey=ea8156fa512e49ddae5f4360b29947f0'
         );
         setArticles(result.data.articles);
         setLoading(false); // Set loading to false after data is fetched

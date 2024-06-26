@@ -43,7 +43,7 @@ const Article = () => {
             <img
               src={article.urlToImage}
               alt={article.title}
-              className="w-full h-64 object-cover"
+              className="w-full h-105 object-cover"
             />
           )}
           <div className="p-6">
