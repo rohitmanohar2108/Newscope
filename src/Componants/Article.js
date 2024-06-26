@@ -25,7 +25,7 @@ const Article = () => {
           >
             <HiArrowLeft className="w-6 h-6" />
           </button>
-          <h1 className={`text-3xl font-bold flex-grow text-center ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Article</h1>
+          <h1 className={`text-3xl font-bold flex-grow text-center font-serif ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Article</h1>
           <button
             onClick={toggleDarkMode}
             className={`p-2 rounded-full flex items-center ml-auto ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'}`}
@@ -47,21 +47,19 @@ const Article = () => {
             />
           )}
           <div className="p-6">
-            <h1 className={`text-3xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.title}</h1>
-            <p className={`text-gray-600 mt-2 ${darkMode ? 'dark:text-gray-400' : ''}`}>By {article.author || 'Unknown'}</p>
-            <p className={`text-gray-600 mt-2 ${darkMode ? 'dark:text-gray-400' : ''}`}>
+            <h1 className={`text-3xl font-bold font-serif ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.title}</h1>
+            <p className={`text-gray-600 mt-2 font-serif ${darkMode ? 'dark:text-gray-400' : ''}`}>By {article.author || 'Unknown'}</p>
+            <p className={`text-gray-600 mt-2  font-serif ${darkMode ? 'dark:text-gray-400' : ''}`}>
               Published at: {new Date(article.publishedAt).toLocaleString()}
             </p>
-            <p className={`mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.description}</p>
-            <p className={`mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
-              {article.content ? article.content.split('[')[0] : 'Content not available. Please visit the original source for full content.'}
-            </p>
+            <p className={` font-serif mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.description}</p>
+            
             {article.url && (
               <a
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-blue-500 underline mt-4 block ${darkMode ? 'dark:text-blue-300' : ''}`}
+                className={`text-blue-500 font-serif font-bold mt-4 block ${darkMode ? 'dark:text-blue-300' : ''}`}
               >
                 Read the full article
               </a>
