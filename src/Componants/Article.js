@@ -54,11 +54,7 @@ const Article = () => {
             </p>
             <p className={`mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.description}</p>
             <p className={`mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
-              {article.content ? (
-                article.content.split('[')[0] // Remove the truncated message part
-              ) : (
-                'Content not available. Please visit the original source for full content.'
-              )}
+              {article.content ? article.content.split('[')[0] : 'Content not available. Please visit the original source for full content.'}
             </p>
             {article.url && (
               <a
