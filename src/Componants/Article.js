@@ -16,11 +16,11 @@ const Article = () => {
     <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <div className={`container mx-auto p-6 ${darkMode ? 'dark' : ''}`}>
         <Header />
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex items-center justify-between mb-6">
           <h1 className={`text-3xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Article</h1>
           <button
             onClick={toggleDarkMode}
-            className={`p-2 rounded-full flex items-center ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'}`}
+            className={`p-2 my-3 rounded-full flex items-center ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'}`}
             title={darkMode ? 'Light Mode' : 'Dark Mode'}
           >
             {darkMode ? (
