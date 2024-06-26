@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
+import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa'; // Importing icons from react-icons
 
 const Footer = ({ darkMode }) => {
   const [showForm, setShowForm] = useState(false);
@@ -89,8 +90,22 @@ const Footer = ({ darkMode }) => {
           </animated.div>
         </div>
       </div>
+
+      {/* Social Media Icons */}
+      <div className="flex justify-end  mt-4 mr-6">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 mx-2">
+          <FaInstagram className="w-6 h-6" />
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 mx-2">
+          <FaFacebook className="w-6 h-6" />
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 mx-2">
+          <FaTwitter className="w-6 h-6" />
+        </a>
+      </div>
     </footer>
   );
 };
 
 export default Footer;
+

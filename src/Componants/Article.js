@@ -16,7 +16,7 @@ const Article = () => {
 
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
-      <div className={`container mx-auto p-6 ${darkMode ? 'dark' : ''}`}>
+      <div className="container mx-auto p-6">
         <Header />
         <div className="flex items-center justify-between mb-6">
           <button
@@ -44,7 +44,8 @@ const Article = () => {
             <img
               src={article.urlToImage}
               alt={article.title}
-              className="w-full h-105 object-cover"
+              className="w-full h-auto object-cover"
+              loading="lazy" // Lazy load the image
             />
           )}
           <div className="p-6">
@@ -53,7 +54,7 @@ const Article = () => {
             <p className={`text-gray-600 mt-2  font-serif ${darkMode ? 'dark:text-gray-400' : ''}`}>
               Published at: {new Date(article.publishedAt).toLocaleString()}
             </p>
-            <p className={` font-serif mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.description}</p>
+            <p className={`font-serif mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.description}</p>
             
             {article.url && (
               <a
@@ -67,9 +68,7 @@ const Article = () => {
             )}
           </div>
         </div>
-      </div>
-      <div>
-        <Footer />
+        <Footer darkMode={darkMode} />
       </div>
     </div>
   );
