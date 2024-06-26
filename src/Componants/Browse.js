@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Shimmer from './Shimmer'; // Import Shimmer component
 import { HiMoon, HiSun } from 'react-icons/hi'; // Import icons for dark/light mode toggle
+import Footer from './Footer';
 
 const Browse = () => {
   const [articles, setArticles] = useState([]);
@@ -88,6 +89,9 @@ const Browse = () => {
             ))
           )}
         </div>
+      </div>
+      <div>
+      <Footer />
       </div>
     </div>
   );

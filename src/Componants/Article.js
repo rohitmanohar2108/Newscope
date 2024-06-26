@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { HiArrowLeft, HiMoon, HiSun } from 'react-icons/hi'; // Icons for back, light mode, and dark mode
 import Header from './Header';
+import Footer from './Footer';
 
 const Article = () => {
   const location = useLocation();
@@ -66,6 +67,9 @@ const Article = () => {
             )}
           </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
