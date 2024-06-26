@@ -15,7 +15,7 @@ const Browse = () => {
     const fetchArticles = async () => {
       try {
         const result = await axios.get(
-          'https://newsapi.org/v2/everything?q=recent geopolitical events&apiKey=ea8156fa512e49ddae5f4360b29947f0'
+          'https://newsapi.org/v2/everything?q=geopolitics&apiKey=ea8156fa512e49ddae5f4360b29947f0'
         );
         setArticles(result.data.articles);
         setLoading(false); // Set loading to false after data is fetched
@@ -49,7 +49,7 @@ const Browse = () => {
       <div className={`container mx-auto p-6 ${darkMode ? 'dark' : ''}`}>
         <Header />
         <div className="flex items-center justify-between mb-5">
-          <h1 className={`text-3xl font-bold flex-grow text-center ml-8 mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+          <h1 className={`text-3xl font-serif font-bold flex-grow text-center ml-8 mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
             Top Headlines
           </h1>
           <button
@@ -82,7 +82,7 @@ const Browse = () => {
                   <img src={article.urlToImage} alt={article.title} className="w-full h-48 object-cover" />
                 )}
                 <div className="p-4">
-                  <h2 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.title}</h2>
+                  <h2 className={`text-xl font-bold font-serif ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.title}</h2>
                 </div>
               </div>
             ))

@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'lato': ['Lato', 'sans-serif'],
+        'serif': ['PT Serif', 'serif'], // Add PT Serif font family
       },
     },
   },
