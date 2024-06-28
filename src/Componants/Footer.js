@@ -17,9 +17,9 @@ const Footer = ({ darkMode }) => {
   });
 
   return (
-    <footer className={` ${darkMode ? 'bg-black text-white' : 'bg-white text-gray-800'} py-4`}>
+    <footer className={` ${darkMode ? 'bg-black text-white' : 'bg-gray-800 text-gray-800'} py-4`}>
       <div className="container mx-auto px-6 lg:px-4 flex flex-col items-center justify-center font-serif">
-        <p className="text-sm">&copy; {new Date().getFullYear()} NewScope. All rights reserved.</p>
+        <p className="text-sm text-white">&copy; {new Date().getFullYear()} NewScope. All rights reserved.</p>
 
         <div className="flex flex-col items-center justify-center mt-6">
           <button
@@ -93,13 +93,13 @@ const Footer = ({ darkMode }) => {
 
       {/* Social Media Icons */}
       <div className="flex justify-end mt-4 mr-6">
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-60== hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-gray-600'}`}>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-60== hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
           <FaInstagram className="w-6 h-6" />
         </a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-600 hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-gray-600'}`}>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-600 hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
           <FaFacebook className="w-6 h-6" />
         </a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-600 hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-gray-600'}`}>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-600 hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
           <FaTwitter className="w-6 h-6" />
         </a>
       </div>
