@@ -34,7 +34,7 @@ const Footer = ({ darkMode }) => {
             className="w-full max-w-md"
           >
             {showForm && (
-              <form className={`bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 ${darkMode ? 'text-white' : 'text-gray-800'} font-serif`}>
+              <form className={`bg-black shadow-md rounded px-8 pt-6 pb-8 mb-4 ${darkMode ? 'text-white' : 'text-gray-800'} font-serif`}>
                 <div className="mb-4">
                   <label
                     className="block text-sm font-bold mb-2 text-white"
@@ -93,13 +93,13 @@ const Footer = ({ darkMode }) => {
 
       {/* Social Media Icons */}
       <div className="flex justify-end mt-4 mr-6">
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-60== hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-60== hover:text-gray-400 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
           <FaInstagram className="w-6 h-6" />
         </a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-600 hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-600 hover:text-gray-400 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
           <FaFacebook className="w-6 h-6" />
         </a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-600 hover:text-gray-800 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className={`text-gray-600 hover:text-gray-400 mx-2 ${darkMode ? 'text-white' : 'text-white'}`}>
           <FaTwitter className="w-6 h-6" />
         </a>
       </div>
