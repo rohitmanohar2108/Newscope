@@ -69,7 +69,7 @@ const Browse = () => {
     };
   }, []);
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-black  text-white' : 'bg-white text-black'}`}>
+    <div className={`min-h-screen ${darkMode ? 'bg-black  text-white' : 'bg-white bg-opacity-80 text-black'}`}>
       <div className={`container mx-auto p-6 pt-20 ${darkMode ? 'dark' : ''}`}>
         <div className="fixed top-0 left-0 right-0 bg-white dark:bg-black z-50">
           <Header />
