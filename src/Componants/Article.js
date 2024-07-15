@@ -16,12 +16,12 @@ const Article = () => {
 
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
-      <div className={`container mx-auto p-6 ${darkMode ? 'dark' : ''}`}>
-        <Header />
+       <div className={`container mx-auto p-6 ${darkMode ? 'dark' : ''}`}>
+       <Header />
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => navigate(-1)}
-            className="p-2 my-3 rounded-full flex items-center bg-gray-200 text-gray-800"
+            className="p-2 my-3 rounded-full flex items-center bg-violet-900 text-white"
             title="Back to Browse"
           >
             <HiArrowLeft className="w-6 h-6" />
@@ -29,7 +29,7 @@ const Article = () => {
           <h1 className={`text-3xl font-bold flex-grow text-center font-serif ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Article</h1>
           <button
             onClick={toggleDarkMode}
-            className={`p-2 rounded-full flex items-center ml-auto ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-800'}`}
+            className={`p-2 rounded-full flex items-center ml-auto ${darkMode ? 'bg-violet-900 text-white' : 'bg-violet-900 text-white'}`}
             title={darkMode ? 'Light Mode' : 'Dark Mode'}
           >
             {darkMode ? (
@@ -39,7 +39,7 @@ const Article = () => {
             )}
           </button>
         </div>
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-violet-600 bg-gradient-to-t from-black dark:bg-violet-600 rounded-lg shadow-lg overflow-hidden">
           {article.urlToImage && (
             <img
               src={article.urlToImage}
@@ -48,12 +48,12 @@ const Article = () => {
             />
           )}
           <div className="p-6">
-            <h1 className={`text-3xl font-bold font-serif ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.title}</h1>
-            <p className={`text-gray-600 mt-2 font-serif ${darkMode ? 'dark:text-gray-400' : ''}`}>By {article.author || 'Unknown'}</p>
-            <p className={`text-gray-600 mt-2 font-serif ${darkMode ? 'dark:text-gray-400' : ''}`}>
+            <h1 className={`text-3xl font-bold font-serif ${darkMode ? 'text-gray-100' : 'text-white'}`}>{article.title}</h1>
+            <p className={`text-gray-600 mt-2 font-serif ${darkMode ? 'dark:text-gray-400' : 'text-white'}`}>By {article.author || 'Unknown'}</p>
+            <p className={`text-gray-600 mt-2 font-serif ${darkMode ? 'dark:text-gray-400' : 'text-white'}`}>
               Published at: {new Date(article.publishedAt).toLocaleString()}
             </p>
-            <p className={`font-serif mt-4 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{article.description}</p>
+            <p className={`font-serif mt-4 ${darkMode ? 'text-gray-100' : 'text-violet-400'}`}>{article.description}</p>
             
             {article.url && (
               <a
